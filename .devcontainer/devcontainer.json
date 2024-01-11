@@ -6,32 +6,15 @@
 		// Sets the run context to one level up instead of the .devcontainer folder.
 		"context": "..",
 		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
-		"dockerfile": "../Dockerfile"
+		"dockerfile": "../Dockerfile",
+		"args": {
+		  "USERNAME": "vscode",
+		  "BUILDKIT_INLINE_CACHE": "0"
+		}
+	
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/common-utils:2": {},
-		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
-		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
-	},
-	"runArgs": [
-		"--gpus",
-		"all"
-],
-"customizations": {
-	"vscode": {
-		"extensions": [
-			"ms-toolsai.jupyter",
-			"ms-python.python",
-			"ms-python.black-formatter",
-			"ArianJamasb.protein-viewer",
-			"GitHub.copilot",
-			"GitHub.copilot-chat",
-			"GitHub.heygithub",
-			"redhat.vscode-yaml"
-		]
 	}
-}
-
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
